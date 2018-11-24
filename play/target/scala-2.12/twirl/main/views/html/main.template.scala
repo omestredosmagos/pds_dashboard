@@ -110,6 +110,31 @@ Seq[Any](format.raw/*7.30*/("""
                                 </ul>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h6 class="text-white text-uppercase mb-20">Localização</h6>
+                                <p class="text-white">Rua Dom Manuel de Medeiros, s/n, Dois Irmãos - CEP: 52171-900 - Recife/PE</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h6 class="text-white text-uppercase mb-20">Email</h6>
+                                <p class="text-white">
+                                    <a class="text-white" href="#">hello&commat;ufrpe.com</a> <br>
+                                    <a class="text-white" href="#">mainhelpinfo&commat;ufrpe.com</a> <br>
+                                    <a class="text-white" href="#">infohelp&commat;ufrpe.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h6 class="text-white text-uppercase mb-20">Suporte</h6>
+                                <p class="text-white">
+                                    <a class="text-white" href="#">support&commat;ufrpe.com</a> <br>
+                                    <a class="text-white" href="#">emergencysupp&commat;ufrpe.com</a> <br>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
                         <p class="footer-text m-0">Copyright &copy; 2018 All rights reserved   |   This template is made with by <a href="https://colorlib.com/">Colorlib</a></p>
@@ -123,14 +148,14 @@ Seq[Any](format.raw/*7.30*/("""
             </footer>
             <!-- End Footer Area -->
         </div>
-        <script src=""""),_display_(/*95.23*/routes/*95.29*/.Assets.versioned("home/js/vendor/jquery-2.2.4.min.js")),format.raw/*95.84*/(""""></script>
+        <script src=""""),_display_(/*120.23*/routes/*120.29*/.Assets.versioned("home/js/vendor/jquery-2.2.4.min.js")),format.raw/*120.84*/(""""></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src=""""),_display_(/*97.23*/routes/*97.29*/.Assets.versioned("home/js/vendor/bootstrap.min.js")),format.raw/*97.81*/(""""></script>
-        <script src=""""),_display_(/*98.23*/routes/*98.29*/.Assets.versioned("home/js/jquery.ajaxchimp.min.js")),format.raw/*98.81*/(""""></script>
-        <script src=""""),_display_(/*99.23*/routes/*99.29*/.Assets.versioned("home/js/owl.carousel.min.js")),format.raw/*99.77*/(""""></script>
-        <script src=""""),_display_(/*100.23*/routes/*100.29*/.Assets.versioned("home/js/jquery.nice-select.min.js")),format.raw/*100.83*/(""""></script>
-        <script src=""""),_display_(/*101.23*/routes/*101.29*/.Assets.versioned("home/js/jquery.magnific-popup.min.js")),format.raw/*101.86*/(""""></script>
-        <script src=""""),_display_(/*102.23*/routes/*102.29*/.Assets.versioned("home/js/main.js")),format.raw/*102.65*/(""""></script>
+        <script src=""""),_display_(/*122.23*/routes/*122.29*/.Assets.versioned("home/js/vendor/bootstrap.min.js")),format.raw/*122.81*/(""""></script>
+        <script src=""""),_display_(/*123.23*/routes/*123.29*/.Assets.versioned("home/js/jquery.ajaxchimp.min.js")),format.raw/*123.81*/(""""></script>
+        <script src=""""),_display_(/*124.23*/routes/*124.29*/.Assets.versioned("home/js/owl.carousel.min.js")),format.raw/*124.77*/(""""></script>
+        <script src=""""),_display_(/*125.23*/routes/*125.29*/.Assets.versioned("home/js/jquery.nice-select.min.js")),format.raw/*125.83*/(""""></script>
+        <script src=""""),_display_(/*126.23*/routes/*126.29*/.Assets.versioned("home/js/jquery.magnific-popup.min.js")),format.raw/*126.86*/(""""></script>
+        <script src=""""),_display_(/*127.23*/routes/*127.29*/.Assets.versioned("home/js/main.js")),format.raw/*127.65*/(""""></script>
     </body>
 </html>"""))
       }
@@ -148,11 +173,11 @@ Seq[Any](format.raw/*7.30*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sat Nov 24 19:34:11 BRST 2018
+                  DATE: Sat Nov 24 21:26:39 BRST 2018
                   SOURCE: C:/Users/natha/Documents/play/app/views/main.scala.html
-                  HASH: dc6f5a166b0429b1a14c774436d5f22df32879e9
-                  MATRIX: 1204->261|1327->289|1357->293|1637->546|1652->552|1716->595|2087->939|2113->944|2177->981|2192->987|2260->1034|2460->1207|2475->1213|2541->1258|2614->1304|2629->1310|2696->1356|2769->1402|2784->1408|2855->1458|2928->1504|2943->1510|3009->1555|3082->1601|3097->1607|3166->1655|3239->1701|3254->1707|3318->1750|3391->1796|3406->1802|3465->1840|3894->2242|3909->2248|3983->2300|4235->2525|4250->2531|4294->2554|4375->2608|4390->2614|4434->2637|4822->2998|4850->3005|4892->3019|6710->4810|6725->4816|6801->4871|7078->5121|7093->5127|7166->5179|7228->5214|7243->5220|7316->5272|7378->5307|7393->5313|7462->5361|7525->5396|7541->5402|7617->5456|7680->5491|7696->5497|7775->5554|7838->5589|7854->5595|7912->5631
-                  LINES: 33->7|38->7|40->9|47->16|47->16|47->16|57->26|57->26|59->28|59->28|59->28|63->32|63->32|63->32|64->33|64->33|64->33|65->34|65->34|65->34|66->35|66->35|66->35|67->36|67->36|67->36|68->37|68->37|68->37|69->38|69->38|69->38|78->47|78->47|78->47|82->51|82->51|82->51|83->52|83->52|83->52|92->61|92->61|93->62|126->95|126->95|126->95|128->97|128->97|128->97|129->98|129->98|129->98|130->99|130->99|130->99|131->100|131->100|131->100|132->101|132->101|132->101|133->102|133->102|133->102
+                  HASH: 307ad9fd38fdfb04bb951f4cd19fe04446dbd497
+                  MATRIX: 1204->261|1327->289|1357->293|1637->546|1652->552|1716->595|2087->939|2113->944|2177->981|2192->987|2260->1034|2460->1207|2475->1213|2541->1258|2614->1304|2629->1310|2696->1356|2769->1402|2784->1408|2855->1458|2928->1504|2943->1510|3009->1555|3082->1601|3097->1607|3166->1655|3239->1701|3254->1707|3318->1750|3391->1796|3406->1802|3465->1840|3894->2242|3909->2248|3983->2300|4235->2525|4250->2531|4294->2554|4375->2608|4390->2614|4434->2637|4822->2998|4850->3005|4892->3019|8386->6485|8402->6491|8479->6546|8757->6796|8773->6802|8847->6854|8910->6889|8926->6895|9000->6947|9063->6982|9079->6988|9149->7036|9212->7071|9228->7077|9304->7131|9367->7166|9383->7172|9462->7229|9525->7264|9541->7270|9599->7306
+                  LINES: 33->7|38->7|40->9|47->16|47->16|47->16|57->26|57->26|59->28|59->28|59->28|63->32|63->32|63->32|64->33|64->33|64->33|65->34|65->34|65->34|66->35|66->35|66->35|67->36|67->36|67->36|68->37|68->37|68->37|69->38|69->38|69->38|78->47|78->47|78->47|82->51|82->51|82->51|83->52|83->52|83->52|92->61|92->61|93->62|151->120|151->120|151->120|153->122|153->122|153->122|154->123|154->123|154->123|155->124|155->124|155->124|156->125|156->125|156->125|157->126|157->126|157->126|158->127|158->127|158->127
                   -- GENERATED --
               */
           

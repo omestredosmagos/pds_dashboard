@@ -187,6 +187,10 @@ td, th {
   margin-left: -20px;
 }
 
+div#lms-img {
+  padding-top: 40px;
+}
+
 .fz-11 {
   font-size: 11px;
 }
@@ -2134,7 +2138,7 @@ nav a:hover {
 
 .studio-area {
   position: relative;
-  background: url(../img/studio-bg.jpg) no-repeat center center/cover;
+  background: url(../img/team-up.jpg) no-repeat center center/cover;
 }
 
 .studio-area .overlay-bg {
@@ -2306,7 +2310,7 @@ nav a:hover {
 }
 
 .carousel-area .overlay-bg {
-  background: rgba(224, 0, 59, 0.8);
+  background: rgba(9, 37, 171, 0.8);
 }
 
 .active-bottle-carousel {
