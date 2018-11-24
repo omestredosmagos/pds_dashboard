@@ -42,15 +42,15 @@ Seq[Any](format.raw/*5.13*/("""
     <div class="overlay overlay-bg"></div>
     <div class="container">
         <div class="row fullscreen align-items-center justify-content-between">
-            <div class="col-lg-6 col-md-7 col-sm-8">
+            <div class="col-lg-4 ">
                 <div class="banner-content">
-                    <h1>Sleek and Clean <br> with same perspective</h1>
-                    <p>Living in today’s metropolitan world of cellular phones, mobile computers and other high-tech gadgets.</p>
-                    <a href="#" class="primary-btn">Get Started<span class="lnr lnr-arrow-right"></span></a>
+                    <h1>Simples e Prático<br>esse é o ConnectEad</h1>
+                    <p>Uma solução dashboard para professores e tutores EAD para acompanhar sua turma de forma mais eficaz e constante.</p>
+                    <a href="#" class="primary-btn">Comece agora<span class="lnr lnr-arrow-right"></span></a>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-5 col-sm-4">
-                <img src=""""),_display_(/*20.28*/routes/*20.34*/.Assets.versioned("home/img/banner.png")),format.raw/*20.74*/("""" alt="" class="img-fluid">
+            <div class="col-lg-8 ">
+                <img src=""""),_display_(/*20.28*/routes/*20.34*/.Assets.versioned("images/macbook_mockup.png")),format.raw/*20.80*/("""" alt="" class="img-fluid banner-img">
             </div>
         </div>
     </div>
@@ -355,10 +355,10 @@ Seq[Any](format.raw/*3.2*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sat Nov 24 15:04:46 BRST 2018
+                  DATE: Sat Nov 24 20:16:26 BRST 2018
                   SOURCE: C:/Users/natha/Documents/play/app/views/index.scala.html
-                  HASH: 9327d12e800dd8cd11ce7d22c667ba1abf90d4fd
-                  MATRIX: 1014->1|1026->6|1106->10|1138->16|1172->33|1186->40|1266->44|1297->66|1327->70|2117->833|2132->839|2193->879|2657->1316|2672->1322|2728->1357|7520->6121|7537->6127|7602->6169|10309->8848|10325->8854|10382->8889|11863->10342|11879->10348|11936->10383|13417->11836|13433->11842|13490->11877|14971->13330|14987->13336|15044->13371|16525->14824|16541->14830|16598->14865|19734->28|19766->17963|19798->17968|19819->17979|19850->17988
+                  HASH: ded4f9440b2d6d6cc8564b52b1708676501b97ce
+                  MATRIX: 1014->1|1026->6|1106->10|1138->16|1172->33|1186->40|1266->44|1297->66|1327->70|2092->808|2107->814|2174->860|2649->1308|2664->1314|2720->1349|7512->6113|7529->6119|7594->6161|10301->8840|10317->8846|10374->8881|11855->10334|11871->10340|11928->10375|13409->11828|13425->11834|13482->11869|14963->13322|14979->13328|15036->13363|16517->14816|16533->14822|16590->14857|19726->28|19758->17955|19790->17960|19811->17971|19842->17980
                   LINES: 32->1|32->1|34->1|35->2|36->5|36->5|38->5|39->6|40->7|53->20|53->20|53->20|66->33|66->33|66->33|154->121|154->121|154->121|204->171|204->171|204->171|223->190|223->190|223->190|242->209|242->209|242->209|261->228|261->228|261->228|280->247|280->247|280->247|337->3|339->303|341->305|341->305|341->305
                   -- GENERATED --
               */

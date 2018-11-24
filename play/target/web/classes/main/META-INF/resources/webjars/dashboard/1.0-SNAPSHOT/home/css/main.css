@@ -183,6 +183,10 @@ td, th {
   clear: both;
 }
 
+.logo {
+  margin-left: -20px;
+}
+
 .fz-11 {
   font-size: 11px;
 }
@@ -1935,7 +1939,7 @@ nav a:hover {
 }
 
 .dup-body {
-  background: #e0003b;
+  background: #009FE3;
 }
 
 .dup-body-wrap {
@@ -1978,7 +1982,7 @@ nav a:hover {
   padding-right: 60px;
   border-radius: 25px;
   background: transparent;
-  border: 1px solid #e0003b;
+  border: 1px solid #0a59bf;
   color: #222222;
   display: inline-block;
   font-weight: 500;
@@ -2009,7 +2013,7 @@ nav a:hover {
 }
 
 .primary-btn:hover {
-  background: #e0003b;
+  background: #0A59BF;
   color: #fff;
 }
 
@@ -2029,11 +2033,11 @@ nav a:hover {
 
 .primary-btn.white:hover {
   background: #fff;
-  color: #e0003b;
+  color: #0A59BF;
 }
 
 .primary-btn.white:hover span {
-  color: #e0003b;
+  color: #0A59BF;
 }
 
 .banner-area {
@@ -2134,7 +2138,7 @@ nav a:hover {
 }
 
 .studio-area .overlay-bg {
-  background: rgba(224, 0, 59, 0.8);
+  background: rgba(9, 37, 171, 0.8);
 }
 
 .studio-area .studio-thumb {
@@ -2465,11 +2469,11 @@ nav a:hover {
 
 .footer-widget-area {
   position: relative;
-  background: url(../img/f-bg.jpg) no-repeat center center/cover;
+  background: url(../img/dashboard-bg.jpeg) no-repeat center center/cover;
 }
 
 .footer-widget-area .overlay-bg {
-  background: rgba(224, 0, 59, 0.8);
+  background: rgba(9, 37, 171, 0.8);
 }
 
 .footer-widget-area .container {
@@ -2564,7 +2568,7 @@ nav a:hover {
 }
 
 .footer-social a:hover i {
-  color: #e0003b;
+  color: #009FE3;
 }
 
 .about-generic-area {
