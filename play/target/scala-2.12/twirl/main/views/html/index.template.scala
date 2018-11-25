@@ -46,7 +46,7 @@ Seq[Any](format.raw/*5.13*/("""
                 <div class="banner-content">
                     <h1>Simples e Prático<br>esse é o ConnectEad</h1>
                     <p>Uma solução dashboard para professores e tutores EAD para acompanhar sua turma de forma mais eficaz e constante.</p>
-                    <a href="#" class="primary-btn">Comece agora<span class="lnr lnr-arrow-right"></span></a>
+                    <a href=""""),_display_(/*16.31*/routes/*16.37*/.HomeController.login()),format.raw/*16.60*/("""" class="primary-btn">Comece agora<span class="lnr lnr-arrow-right"></span></a>
                 </div>
             </div>
             <div class="col-lg-8 ">
@@ -83,8 +83,8 @@ Seq[Any](format.raw/*5.13*/("""
         <div class="row align-items-center">
             <div class="col-lg-5">
                 <div class="achivement-content">
-                    <h2>Our Achievements</h2>
-                    <p class="mb-30">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct </p>
+                    <h2>Apoiadores</h2>
+                    <p class="mb-30">Este projeto conta com a colaboração dos alunos e professores da Universidade Federal Rural de Pernambuco e da Universidade Federal de Pernambuco no desenvolvimento do sistema e analise de dados. E a parceria coma Universidade de Pernambuco com a disponibilização de uma base de dados da EAD da mesma. </p>
                     <a href="#" class="primary-btn">Ver mais<span class="lnr lnr-arrow-right"></span></a>
                 </div>
             </div>
@@ -94,49 +94,25 @@ Seq[Any](format.raw/*5.13*/("""
                         <div class="col-md-4 col-sm-6">
                             <div class="single-achivement">
                                 <a href="#" class="achivement-link">
-                                    <i class="fa fa-behance"></i>
+                                    <i class="fa fa-globe"></i>
                                 </a>
-                                <h6><a href="#">Behance Review</a></h6>
+                                <h6><a href="https://ufrpe.br">UFRPE</a></h6>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <div class="single-achivement">
                                 <a href="#" class="achivement-link">
-                                    <i class="fa fa-dribbble"></i>
+                                    <i class="fa fa-globe"></i>
                                 </a>
-                                <h6><a href="#">Dribbble Shots</a></h6>
+                                <h6><a href="https://ufpe.br">UFPE</a></h6>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <div class="single-achivement">
                                 <a href="#" class="achivement-link">
-                                    <i class="fa fa-youtube"></i>
+                                    <i class="fa fa-globe"></i>
                                 </a>
-                                <h6><a href="#">Youtube Subscribe</a></h6>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-achivement">
-                                <a href="#" class="achivement-link">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                                <h6><a href="#">Github Push</a></h6>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-achivement">
-                                <a href="#" class="achivement-link">
-                                    <i class="fa fa-trophy"></i>
-                                </a>
-                                <h6><a href="#">Offline Trophy</a></h6>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-achivement">
-                                <a href="#" class="achivement-link">
-                                    <i class="fa fa-usd"></i>
-                                </a>
-                                <h6><a href="#">Cash Prizes</a></h6>
+                                <h6><a href="https://upe.br">UPE</a></h6>
                             </div>
                         </div>
                     </div>
@@ -155,14 +131,14 @@ Seq[Any](format.raw/*5.13*/("""
                 <div class="row align-items-center">
                     <div class="col-xl-6 col-md-4">
                         <div class="carousel-thumb">
-                            <img src=""""),_display_(/*125.40*/routes/*125.46*/.Assets.versioned("images/slide4.jpg")),format.raw/*125.84*/("""" alt="" class="img-fluid">
+                            <img src=""""),_display_(/*101.40*/routes/*101.46*/.Assets.versioned("images/slide5.jpg")),format.raw/*101.84*/("""" alt="" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-xl-6 col-md-7">
                         <div class="carousel-content">
-                            <h2 class="text-white">Glowing Milk Bottle</h2>
-                            <h5 class="text-white mb-20">Collect from your nearest supershop imedietely</h5>
-                            <p class="text-white mb-30">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.Small Towns and Big StatesFor evidence of the double standard, we need look no farther than Arlington.</p>
+                            <h2 class="text-white">Dashboard</h2>
+                            <h5 class="text-white mb-20">No entanto, não podemos esquecer que a determinação clara de objetivos promove a alavancagem dos índices pretendidos.</h5>
+                            <p class="text-white mb-30">O cuidado em identificar pontos críticos no surgimento do comércio virtual agrega valor ao estabelecimento dos métodos utilizados na avaliação de resultados. O empenho em analisar a competitividade nas transações comerciais ainda não demonstrou convincentemente que vai participar na mudança das diretrizes de desenvolvimento para o futuro. Assim mesmo, o acompanhamento das preferências de consumo pode nos levar a considerar a reestruturação das posturas dos órgãos dirigentes com relação às suas atribuições.</p>
                             <a href="#" class="primary-btn white">Ver mais<span class="lnr lnr-arrow-right"></span></a>
                         </div>
                     </div>
@@ -174,14 +150,14 @@ Seq[Any](format.raw/*5.13*/("""
                 <div class="row align-items-center">
                     <div class="col-xl-6 col-md-4">
                         <div class="carousel-thumb">
-                            <img src=""""),_display_(/*144.40*/routes/*144.46*/.Assets.versioned("home/img/c.jpg")),format.raw/*144.81*/("""" alt="" class="img-fluid">
+                            <img src=""""),_display_(/*120.40*/routes/*120.46*/.Assets.versioned("images/slide6.jpg")),format.raw/*120.84*/("""" alt="" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-xl-6 col-md-7">
                         <div class="carousel-content">
-                            <h2 class="text-white">Glowing Milk Bottle</h2>
-                            <h5 class="text-white mb-20">Collect from your nearest supershop imedietely</h5>
-                            <p class="text-white mb-30">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.Small Towns and Big StatesFor evidence of the double standard, we need look no farther than Arlington.</p>
+                            <h2 class="text-white">Moodle</h2>
+                            <h5 class="text-white mb-20">No entanto, não podemos esquecer que a determinação clara de objetivos promove a alavancagem dos índices pretendidos.</h5>
+                            <p class="text-white mb-30">O cuidado em identificar pontos críticos no surgimento do comércio virtual agrega valor ao estabelecimento dos métodos utilizados na avaliação de resultados. O empenho em analisar a competitividade nas transações comerciais ainda não demonstrou convincentemente que vai participar na mudança das diretrizes de desenvolvimento para o futuro. Assim mesmo, o acompanhamento das preferências de consumo pode nos levar a considerar a reestruturação das posturas dos órgãos dirigentes com relação às suas atribuições.</p>
                             <a href="#" class="primary-btn white">Ver mais<span class="lnr lnr-arrow-right"></span></a>
                         </div>
                     </div>
@@ -193,52 +169,14 @@ Seq[Any](format.raw/*5.13*/("""
                 <div class="row align-items-center">
                     <div class="col-xl-6 col-md-4">
                         <div class="carousel-thumb">
-                            <img src=""""),_display_(/*163.40*/routes/*163.46*/.Assets.versioned("home/img/c.jpg")),format.raw/*163.81*/("""" alt="" class="img-fluid">
+                            <img src=""""),_display_(/*139.40*/routes/*139.46*/.Assets.versioned("home/img/c.jpg")),format.raw/*139.81*/("""" alt="" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-xl-6 col-md-7">
                         <div class="carousel-content">
-                            <h2 class="text-white">Glowing Milk Bottle</h2>
-                            <h5 class="text-white mb-20">Collect from your nearest supershop imedietely</h5>
-                            <p class="text-white mb-30">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.Small Towns and Big StatesFor evidence of the double standard, we need look no farther than Arlington.</p>
-                            <a href="#" class="primary-btn white">Ver mais<span class="lnr lnr-arrow-right"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-6 col-md-4">
-                        <div class="carousel-thumb">
-                            <img src=""""),_display_(/*182.40*/routes/*182.46*/.Assets.versioned("home/img/c.jpg")),format.raw/*182.81*/("""" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-7">
-                        <div class="carousel-content">
-                            <h2 class="text-white">Glowing Milk Bottle</h2>
-                            <h5 class="text-white mb-20">Collect from your nearest supershop imedietely</h5>
-                            <p class="text-white mb-30">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.Small Towns and Big StatesFor evidence of the double standard, we need look no farther than Arlington.</p>
-                            <a href="#" class="primary-btn white">Ver mais<span class="lnr lnr-arrow-right"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-6 col-md-4">
-                        <div class="carousel-thumb">
-                            <img src=""""),_display_(/*201.40*/routes/*201.46*/.Assets.versioned("home/img/c.jpg")),format.raw/*201.81*/("""" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-7">
-                        <div class="carousel-content">
-                            <h2 class="text-white">Glowing Milk Bottle</h2>
-                            <h5 class="text-white mb-20">Collect from your nearest supershop imedietely</h5>
-                            <p class="text-white mb-30">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.Small Towns and Big StatesFor evidence of the double standard, we need look no farther than Arlington.</p>
+                            <h2 class="text-white">Educação a Distância</h2>
+                            <h5 class="text-white mb-20">No entanto, não podemos esquecer que a determinação clara de objetivos promove a alavancagem dos índices pretendidos.</h5>
+                            <p class="text-white mb-30">O cuidado em identificar pontos críticos no surgimento do comércio virtual agrega valor ao estabelecimento dos métodos utilizados na avaliação de resultados. O empenho em analisar a competitividade nas transações comerciais ainda não demonstrou convincentemente que vai participar na mudança das diretrizes de desenvolvimento para o futuro. Assim mesmo, o acompanhamento das preferências de consumo pode nos levar a considerar a reestruturação das posturas dos órgãos dirigentes com relação às suas atribuições.</p>
                             <a href="#" class="primary-btn white">Ver mais<span class="lnr lnr-arrow-right"></span></a>
                         </div>
                     </div>
@@ -281,7 +219,7 @@ Seq[Any](format.raw/*5.13*/("""
                 </div>
             </div>
             <div id="lms-img" class="col-lg-6">
-                <img src=""""),_display_(/*251.28*/routes/*251.34*/.Assets.versioned("home/img/lms.png")),format.raw/*251.71*/("""" alt="" class="img-fluid">
+                <img src=""""),_display_(/*189.28*/routes/*189.34*/.Assets.versioned("home/img/lms.png")),format.raw/*189.71*/("""" alt="" class="img-fluid">
             </div>
         </div>
     </div>
@@ -325,9 +263,9 @@ Seq[Any](format.raw/*5.13*/("""
 """)))};
 Seq[Any](format.raw/*3.2*/("""
 
-"""),format.raw/*292.2*/("""
+"""),format.raw/*230.2*/("""
 
-"""),_display_(/*294.2*/main(title)/*294.13*/(content)),format.raw/*294.22*/("""
+"""),_display_(/*232.2*/main(title)/*232.13*/(content)),format.raw/*232.22*/("""
  """))
       }
     }
@@ -344,11 +282,11 @@ Seq[Any](format.raw/*3.2*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sat Nov 24 21:44:41 BRST 2018
+                  DATE: Sat Nov 24 23:30:16 BRST 2018
                   SOURCE: C:/Users/natha/Documents/play/app/views/index.scala.html
-                  HASH: 74165394df9dfff4305bcd54995aefa7ac9d27f9
-                  MATRIX: 1014->1|1026->6|1106->10|1138->16|1172->33|1186->40|1266->44|1297->66|1327->70|2092->808|2107->814|2174->860|2649->1308|2664->1314|2732->1361|3202->1804|3217->1810|3261->1833|7517->6061|7533->6067|7593->6105|9073->7557|9089->7563|9146->7598|10626->9050|10642->9056|10699->9091|12179->10543|12195->10549|12252->10584|13732->12036|13748->12042|13805->12077|17074->15318|17090->15324|17149->15361|19160->28|19192->17334|19224->17339|19245->17350|19276->17359
-                  LINES: 32->1|32->1|34->1|35->2|36->5|36->5|38->5|39->6|40->7|53->20|53->20|53->20|66->33|66->33|66->33|73->40|73->40|73->40|158->125|158->125|158->125|177->144|177->144|177->144|196->163|196->163|196->163|215->182|215->182|215->182|234->201|234->201|234->201|284->251|284->251|284->251|326->3|328->292|330->294|330->294|330->294
+                  HASH: e5f6f2e685b660b007d1af59a1a2f9f776db0372
+                  MATRIX: 1014->1|1026->6|1106->10|1138->16|1172->33|1186->40|1266->44|1297->66|1327->70|1903->619|1918->625|1962->648|2178->837|2193->843|2260->889|2735->1337|2750->1343|2818->1390|3288->1833|3303->1839|3347->1862|6338->4825|6354->4831|6414->4869|7967->6394|7983->6400|8043->6438|9593->7960|9609->7966|9666->8001|13019->11326|13035->11332|13094->11369|15105->28|15137->13342|15169->13347|15190->13358|15221->13367
+                  LINES: 32->1|32->1|34->1|35->2|36->5|36->5|38->5|39->6|40->7|49->16|49->16|49->16|53->20|53->20|53->20|66->33|66->33|66->33|73->40|73->40|73->40|134->101|134->101|134->101|153->120|153->120|153->120|172->139|172->139|172->139|222->189|222->189|222->189|264->3|266->230|268->232|268->232|268->232
                   -- GENERATED --
               */
           

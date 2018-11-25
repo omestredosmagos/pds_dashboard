@@ -191,6 +191,11 @@ div#lms-img {
   padding-top: 40px;
 }
 
+.container-apoio {
+  height: 40px;
+  width: 40px;
+}
+
 .fz-11 {
   font-size: 11px;
 }
@@ -2252,7 +2257,7 @@ nav a:hover {
 }
 
 .achivement-area .single-achivement:hover .achivement-link {
-  background: #e0003b;
+  background: #0A59BF;
 }
 
 .achivement-area .single-achivement:hover .achivement-link i {
