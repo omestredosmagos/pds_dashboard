@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/natha/Documents/play/conf/routes
-// @DATE:Sat Nov 24 15:02:23 BRST 2018
+// @DATE:Mon Nov 26 20:57:16 BRST 2018
 
 package router
 

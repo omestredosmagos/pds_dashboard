@@ -1,6 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\natha\Documents\play\app\views\about.scala.html:1:7: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : String("About Us")[0m
-[0m[[0m[31merror[0m] [0m[0m required: play.twirl.api.Html[0m
-[0m[[0m[31merror[0m] [0m[0m@main("About Us"){[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m

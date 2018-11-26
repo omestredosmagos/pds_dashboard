@@ -46,7 +46,7 @@ Seq[Any]()
 
               /*
                   -- GENERATED --
-                  DATE: Sat Nov 24 15:02:24 BRST 2018
+                  DATE: Mon Nov 26 20:57:18 BRST 2018
                   SOURCE: C:/Users/natha/Documents/play/app/views/estabelecimentoMeta.scala.html
                   HASH: 282da6d6fc3be5f18bafd4f3e6904d0c508db341
                   MATRIX: 

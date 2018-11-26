@@ -152,7 +152,7 @@ Seq[Any](format.raw/*3.2*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sat Nov 24 15:02:24 BRST 2018
+                  DATE: Mon Nov 26 20:57:18 BRST 2018
                   SOURCE: C:/Users/natha/Documents/play/app/views/buscaAjuda.scala.html
                   HASH: 9c2bbd82cee68de5e57287887bf80432e99119f0
                   MATRIX: 1019->1|1031->6|1111->10|1143->16|1176->32|1190->39|1270->43|1302->49|6519->27|6551->5228|6581->5231|6607->5247

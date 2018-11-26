@@ -130,7 +130,7 @@ Seq[Any](format.raw/*1.1*/("""<!-- """),format.raw/*1.27*/("""{"""),format.raw/*
 
               /*
                   -- GENERATED --
-                  DATE: Sat Nov 24 15:03:50 BRST 2018
+                  DATE: Mon Nov 26 20:57:18 BRST 2018
                   SOURCE: C:/Users/natha/Documents/play/app/views/about.scala.html
                   HASH: 24a5b1e0f923f8bbd45d7aa19847b6b9ffef486d
                   MATRIX: 1030->0|1062->26|1090->27|1122->33|2839->1723|2854->1729|2913->1767|3434->2261|3449->2267|3508->2305|3982->2752|3997->2758|4056->2796|4524->3237|4539->3243|4598->3281|4961->3617|4989->3618|5022->3624
