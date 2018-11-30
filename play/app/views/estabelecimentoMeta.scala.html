@@ -1,0 +1,56 @@
+@title = {
+    Estabelecimento de Metas
+}
+
+@content = {  
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="overview-wrap">
+                            <h2 class="title-1">Estabelecimento de Metas</h2>
+                            <button class="au-btn au-btn-icon au-btn--blue">
+                                <i class="zmdi zmdi-plus"></i>Adicionar Gráfico</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="au-card visualization1">
+                            <div class="au-card-inner">
+                                <h3 class="title-2">Entregas de Atividades</h3>
+                                <div id="tarefas_prazo_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="au-card visualization2">
+                            <div class="au-card-inner">
+                                <h3 class="title-2">Leituras feitas ao Fórum</h3>
+                                <div id="leitura_forum_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <p>Copyright 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <script src="@routes.Assets.versioned("javascripts/highcharts.js")"></script>
+    <script src="@routes.Assets.versioned("javascripts/modules/exporting.js")"></script>
+    <script src="@routes.Assets.versioned("javascripts/modules/series-label.js")"></script>
+    <script src="@routes.Assets.versioned("javascripts/modules/export-data.js")"></script>
+    <script src="@routes.Assets.versioned("javascripts/realizacao-tarefas/tarefas-prazo.js")"></script>
+    <script src="@routes.Assets.versioned("javascripts/realizacao-tarefas/leitura-forum.js")"></script>
+}
+@dashboard(title)(content)
