@@ -8,7 +8,7 @@
     <meta name="description" content="au theme template">
 	<link rel="icon" href="@routes.Assets.versioned("images/speedometer.png")">
     <!-- Title Page-->
-    <title>Login</title>
+    <title>Sign Up</title>
 
     <!-- Fontfaces CSS-->
     <link href="@routes.Assets.versioned("template/css/font-face.css")" rel="stylesheet" media="all">
@@ -47,7 +47,11 @@
                         <div class="login-form">
                             <form action="" method="post">
                                 <div class="form-group">
-                                    <label>E-mail  <small>(Use suas credenciais dos serviços integrados da UFRPE)</small></label>
+                                    <label>Usuário</label>
+                                    <input class="au-input au-input--full" type="text" name="username" placeholder="usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label>E-mail</label>
                                     <input class="au-input au-input--full" type="email" name="email" placeholder="email&commat;example.com">
                                 </div>
                                 <div class="form-group">
@@ -56,14 +60,11 @@
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember">Lembrar-me
-                                    </label>
-                                    <label>
-                                        <a href="@routes.HomeController.forgetPassword()">Esqueceu a senha?</a>
+                                        <input type="checkbox" name="agree">Concordar com os termos e política
                                     </label>
                                 </div>
 <!--                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="button">sign in</button> -->
-                                <a id="sign_in" class="au-btn au-btn--block au-btn--green m-b-20" href="@routes.HomeController.dashboard()" role="button">Entrar</a>
+                                <a id="sign_in" class="au-btn au-btn--block au-btn--green m-b-20" href="@routes.HomeController.login()" role="button">Registrar</a>
                             </form>
                         </div>
                     </div>

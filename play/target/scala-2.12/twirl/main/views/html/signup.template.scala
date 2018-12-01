@@ -22,7 +22,7 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object login extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object signup extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
   def apply():play.twirl.api.HtmlFormat.Appendable = {
@@ -40,7 +40,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
     <meta name="description" content="au theme template">
 	<link rel="icon" href=""""),_display_(/*9.26*/routes/*9.32*/.Assets.versioned("images/speedometer.png")),format.raw/*9.75*/("""">
     <!-- Title Page-->
-    <title>Login</title>
+    <title>Sign Up</title>
 
     <!-- Fontfaces CSS-->
     <link href=""""),_display_(/*14.18*/routes/*14.24*/.Assets.versioned("template/css/font-face.css")),format.raw/*14.71*/("""" rel="stylesheet" media="all">
@@ -79,7 +79,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                         <div class="login-form">
                             <form action="" method="post">
                                 <div class="form-group">
-                                    <label>E-mail  <small>(Use suas credenciais dos serviços integrados da UFRPE)</small></label>
+                                    <label>Usuário</label>
+                                    <input class="au-input au-input--full" type="text" name="username" placeholder="usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label>E-mail</label>
                                     <input class="au-input au-input--full" type="email" name="email" placeholder="email&commat;example.com">
                                 </div>
                                 <div class="form-group">
@@ -88,14 +92,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember">Lembrar-me
-                                    </label>
-                                    <label>
-                                        <a href=""""),_display_(/*62.51*/routes/*62.57*/.HomeController.forgetPassword()),format.raw/*62.89*/("""">Esqueceu a senha?</a>
+                                        <input type="checkbox" name="agree">Concordar com os termos e política
                                     </label>
                                 </div>
 <!--                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="button">sign in</button> -->
-                                <a id="sign_in" class="au-btn au-btn--block au-btn--green m-b-20" href=""""),_display_(/*66.106*/routes/*66.112*/.HomeController.dashboard()),format.raw/*66.139*/("""" role="button">Entrar</a>
+                                <a id="sign_in" class="au-btn au-btn--block au-btn--green m-b-20" href=""""),_display_(/*67.106*/routes/*67.112*/.HomeController.login()),format.raw/*67.135*/("""" role="button">Registrar</a>
                             </form>
                         </div>
                     </div>
@@ -105,28 +106,28 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
     </div>
 
     <!-- Jquery JS-->
-    <script src=""""),_display_(/*76.19*/routes/*76.25*/.Assets.versioned("template/vendor/jquery-3.2.1.min.js")),format.raw/*76.81*/(""""></script>
+    <script src=""""),_display_(/*77.19*/routes/*77.25*/.Assets.versioned("template/vendor/jquery-3.2.1.min.js")),format.raw/*77.81*/(""""></script>
     <!-- Bootstrap JS-->
-    <script src=""""),_display_(/*78.19*/routes/*78.25*/.Assets.versioned("template/vendor/bootstrap-4.1/popper.min.js")),format.raw/*78.89*/(""""></script>
-    <script src=""""),_display_(/*79.19*/routes/*79.25*/.Assets.versioned("template/vendor/bootstrap-4.1/bootstrap.min.js")),format.raw/*79.92*/(""""></script>
+    <script src=""""),_display_(/*79.19*/routes/*79.25*/.Assets.versioned("template/vendor/bootstrap-4.1/popper.min.js")),format.raw/*79.89*/(""""></script>
+    <script src=""""),_display_(/*80.19*/routes/*80.25*/.Assets.versioned("template/vendor/bootstrap-4.1/bootstrap.min.js")),format.raw/*80.92*/(""""></script>
     <!-- Vendor JS       -->
-    <script src=""""),_display_(/*81.19*/routes/*81.25*/.Assets.versioned("template/vendor/slick/slick.min.js")),format.raw/*81.80*/("""">
+    <script src=""""),_display_(/*82.19*/routes/*82.25*/.Assets.versioned("template/vendor/slick/slick.min.js")),format.raw/*82.80*/("""">
     </script>
-    <script src=""""),_display_(/*83.19*/routes/*83.25*/.Assets.versioned("template/vendor/wow/wow.min.js")),format.raw/*83.76*/(""""></script>
-    <script src=""""),_display_(/*84.19*/routes/*84.25*/.Assets.versioned("template/vendor/animsition/animsition.min.js")),format.raw/*84.90*/(""""></script>
-    <script src=""""),_display_(/*85.19*/routes/*85.25*/.Assets.versioned("template/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js")),format.raw/*85.112*/("""">
+    <script src=""""),_display_(/*84.19*/routes/*84.25*/.Assets.versioned("template/vendor/wow/wow.min.js")),format.raw/*84.76*/(""""></script>
+    <script src=""""),_display_(/*85.19*/routes/*85.25*/.Assets.versioned("template/vendor/animsition/animsition.min.js")),format.raw/*85.90*/(""""></script>
+    <script src=""""),_display_(/*86.19*/routes/*86.25*/.Assets.versioned("template/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js")),format.raw/*86.112*/("""">
     </script>
-    <script src=""""),_display_(/*87.19*/routes/*87.25*/.Assets.versioned("template/vendor/counter-up/jquery.waypoints.min.js")),format.raw/*87.96*/(""""></script>
-    <script src=""""),_display_(/*88.19*/routes/*88.25*/.Assets.versioned("template/vendor/counter-up/jquery.counterup.min.js")),format.raw/*88.96*/("""">
+    <script src=""""),_display_(/*88.19*/routes/*88.25*/.Assets.versioned("template/vendor/counter-up/jquery.waypoints.min.js")),format.raw/*88.96*/(""""></script>
+    <script src=""""),_display_(/*89.19*/routes/*89.25*/.Assets.versioned("template/vendor/counter-up/jquery.counterup.min.js")),format.raw/*89.96*/("""">
     </script>
-    <script src=""""),_display_(/*90.19*/routes/*90.25*/.Assets.versioned("template/vendor/circle-progress/circle-progress.min.js")),format.raw/*90.100*/(""""></script>
-    <script src=""""),_display_(/*91.19*/routes/*91.25*/.Assets.versioned("template/vendor/perfect-scrollbar/perfect-scrollbar.js")),format.raw/*91.100*/(""""></script>
-    <script src=""""),_display_(/*92.19*/routes/*92.25*/.Assets.versioned("template/vendor/chartjs/Chart.bundle.min.js")),format.raw/*92.89*/(""""></script>
-    <script src=""""),_display_(/*93.19*/routes/*93.25*/.Assets.versioned("template/vendor/select2/select2.min.js")),format.raw/*93.84*/("""">
+    <script src=""""),_display_(/*91.19*/routes/*91.25*/.Assets.versioned("template/vendor/circle-progress/circle-progress.min.js")),format.raw/*91.100*/(""""></script>
+    <script src=""""),_display_(/*92.19*/routes/*92.25*/.Assets.versioned("template/vendor/perfect-scrollbar/perfect-scrollbar.js")),format.raw/*92.100*/(""""></script>
+    <script src=""""),_display_(/*93.19*/routes/*93.25*/.Assets.versioned("template/vendor/chartjs/Chart.bundle.min.js")),format.raw/*93.89*/(""""></script>
+    <script src=""""),_display_(/*94.19*/routes/*94.25*/.Assets.versioned("template/vendor/select2/select2.min.js")),format.raw/*94.84*/("""">
     </script>
 
     <!-- Main JS-->
-    <script src=""""),_display_(/*97.19*/routes/*97.25*/.Assets.versioned("template/js/main.js")),format.raw/*97.65*/(""""></script>
+    <script src=""""),_display_(/*98.19*/routes/*98.25*/.Assets.versioned("template/js/main.js")),format.raw/*98.65*/(""""></script>
 
 </body>
 
@@ -147,11 +148,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 30 22:17:31 BRST 2018
-                  SOURCE: C:/Users/natha/Documents/play/app/views/login.scala.html
-                  HASH: 0ff1863bc4fe446126072e409572406b481172a7
-                  MATRIX: 1030->0|1332->276|1346->282|1409->325|1531->420|1546->426|1614->473|1690->522|1705->528|1805->606|1881->655|1896->661|1997->740|2073->789|2088->795|2195->880|2298->956|2313->962|2402->1030|2502->1103|2517->1109|2604->1175|2680->1224|2695->1230|2811->1324|2887->1373|2902->1379|2975->1431|3051->1480|3066->1486|3157->1556|3233->1605|3248->1611|3321->1663|3397->1712|3412->1718|3493->1778|3569->1827|3584->1833|3682->1909|3780->1980|3795->1986|3859->2029|4238->2381|4253->2387|4297->2410|4370->2456|4385->2462|4459->2514|5660->3688|5675->3694|5728->3726|6099->4069|6115->4075|6164->4102|6421->4332|6436->4338|6513->4394|6595->4449|6610->4455|6695->4519|6752->4549|6767->4555|6855->4622|6941->4681|6956->4687|7032->4742|7094->4777|7109->4783|7181->4834|7238->4864|7253->4870|7339->4935|7396->4965|7411->4971|7520->5058|7582->5093|7597->5099|7689->5170|7746->5200|7761->5206|7853->5277|7915->5312|7930->5318|8027->5393|8084->5423|8099->5429|8196->5504|8253->5534|8268->5540|8353->5604|8410->5634|8425->5640|8505->5699|8588->5755|8603->5761|8664->5801
-                  LINES: 33->1|41->9|41->9|41->9|46->14|46->14|46->14|47->15|47->15|47->15|48->16|48->16|48->16|49->17|49->17|49->17|52->20|52->20|52->20|55->23|55->23|55->23|56->24|56->24|56->24|57->25|57->25|57->25|58->26|58->26|58->26|59->27|59->27|59->27|60->28|60->28|60->28|61->29|61->29|61->29|64->32|64->32|64->32|75->43|75->43|75->43|76->44|76->44|76->44|94->62|94->62|94->62|98->66|98->66|98->66|108->76|108->76|108->76|110->78|110->78|110->78|111->79|111->79|111->79|113->81|113->81|113->81|115->83|115->83|115->83|116->84|116->84|116->84|117->85|117->85|117->85|119->87|119->87|119->87|120->88|120->88|120->88|122->90|122->90|122->90|123->91|123->91|123->91|124->92|124->92|124->92|125->93|125->93|125->93|129->97|129->97|129->97
+                  DATE: Fri Nov 30 22:17:32 BRST 2018
+                  SOURCE: C:/Users/natha/Documents/play/app/views/signup.scala.html
+                  HASH: ec894e206ca66d4c1833900b36a13d50de18211b
+                  MATRIX: 1031->0|1341->284|1355->290|1418->333|1547->435|1562->441|1630->488|1707->538|1722->544|1822->622|1899->672|1914->678|2015->757|2092->807|2107->813|2214->898|2320->977|2335->983|2424->1051|2527->1127|2542->1133|2629->1199|2706->1249|2721->1255|2837->1349|2914->1399|2929->1405|3002->1457|3079->1507|3094->1513|3185->1583|3262->1633|3277->1639|3350->1691|3427->1741|3442->1747|3523->1807|3600->1857|3615->1863|3713->1939|3814->2013|3829->2019|3893->2062|4283->2425|4298->2431|4342->2454|4416->2501|4431->2507|4505->2559|6140->4166|6156->4172|6201->4195|6471->4438|6486->4444|6563->4500|6647->4557|6662->4563|6747->4627|6805->4658|6820->4664|6908->4731|6996->4792|7011->4798|7087->4853|7151->4890|7166->4896|7238->4947|7296->4978|7311->4984|7397->5049|7455->5080|7470->5086|7579->5173|7643->5210|7658->5216|7750->5287|7808->5318|7823->5324|7915->5395|7979->5432|7994->5438|8091->5513|8149->5544|8164->5550|8261->5625|8319->5656|8334->5662|8419->5726|8477->5757|8492->5763|8572->5822|8659->5882|8674->5888|8735->5928
+                  LINES: 33->1|41->9|41->9|41->9|46->14|46->14|46->14|47->15|47->15|47->15|48->16|48->16|48->16|49->17|49->17|49->17|52->20|52->20|52->20|55->23|55->23|55->23|56->24|56->24|56->24|57->25|57->25|57->25|58->26|58->26|58->26|59->27|59->27|59->27|60->28|60->28|60->28|61->29|61->29|61->29|64->32|64->32|64->32|75->43|75->43|75->43|76->44|76->44|76->44|99->67|99->67|99->67|109->77|109->77|109->77|111->79|111->79|111->79|112->80|112->80|112->80|114->82|114->82|114->82|116->84|116->84|116->84|117->85|117->85|117->85|118->86|118->86|118->86|120->88|120->88|120->88|121->89|121->89|121->89|123->91|123->91|123->91|124->92|124->92|124->92|125->93|125->93|125->93|126->94|126->94|126->94|130->98|130->98|130->98
                   -- GENERATED --
               */
           

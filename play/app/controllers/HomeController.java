@@ -26,6 +26,14 @@ public class HomeController extends Controller {
         return ok(views.html.login.render());
     }
 
+    public Result signUp() {
+        return ok(views.html.signup.render());
+    }
+
+    public Result forgetPassword() {
+        return ok(views.html.forgetpassword.render());
+    }
+
     public Result dashboard() {
         return ok(views.html.dashboard2.render());
     }

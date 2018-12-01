@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/natha/Documents/play/conf/routes
-// @DATE:Fri Nov 30 13:19:56 BRST 2018
+// @DATE:Fri Nov 30 22:15:40 BRST 2018
 
 import play.api.mvc.Call
 
@@ -30,10 +30,22 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "estabelecimentometa")
     }
   
+    // @LINE:21
+    def signUp(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "signup")
+    }
+  
     // @LINE:15
     def dashboard(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "dashboard")
+    }
+  
+    // @LINE:22
+    def forgetPassword(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "recuperarsenha")
     }
   
     // @LINE:17

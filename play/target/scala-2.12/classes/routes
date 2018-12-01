@@ -18,3 +18,5 @@ GET		/realizacaotarefas			controllers.HomeController.realizacaoTarefas
 GET		/autoavaliacao				controllers.HomeController.autoavaliacao
 GET		/gerenciamentotempo		    controllers.HomeController.gerenciamentoTempo
 GET		/estabelecimentometa		controllers.HomeController.estabelecimentoMeta
+GET     /signup                     controllers.HomeController.signUp
+GET     /recuperarsenha             controllers.HomeController.forgetPassword

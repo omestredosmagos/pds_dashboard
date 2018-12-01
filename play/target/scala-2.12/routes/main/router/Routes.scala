@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/natha/Documents/play/conf/routes
-// @DATE:Fri Nov 30 13:19:56 BRST 2018
+// @DATE:Fri Nov 30 22:15:40 BRST 2018
 
 package router
 
@@ -48,6 +48,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """autoavaliacao""", """controllers.HomeController.autoavaliacao"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """gerenciamentotempo""", """controllers.HomeController.gerenciamentoTempo"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """estabelecimentometa""", """controllers.HomeController.estabelecimentoMeta"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.HomeController.signUp"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recuperarsenha""", """controllers.HomeController.forgetPassword"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -217,6 +219,42 @@ class Routes(
     )
   )
 
+  // @LINE:21
+  private[this] lazy val controllers_HomeController_signUp9_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
+  )
+  private[this] lazy val controllers_HomeController_signUp9_invoker = createInvoker(
+    HomeController_0.signUp,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "signUp",
+      Nil,
+      "GET",
+      this.prefix + """signup""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val controllers_HomeController_forgetPassword10_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recuperarsenha")))
+  )
+  private[this] lazy val controllers_HomeController_forgetPassword10_invoker = createInvoker(
+    HomeController_0.forgetPassword,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "forgetPassword",
+      Nil,
+      "GET",
+      this.prefix + """recuperarsenha""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -272,6 +310,18 @@ class Routes(
     case controllers_HomeController_estabelecimentoMeta8_route(params@_) =>
       call { 
         controllers_HomeController_estabelecimentoMeta8_invoker.call(HomeController_0.estabelecimentoMeta)
+      }
+  
+    // @LINE:21
+    case controllers_HomeController_signUp9_route(params@_) =>
+      call { 
+        controllers_HomeController_signUp9_invoker.call(HomeController_0.signUp)
+      }
+  
+    // @LINE:22
+    case controllers_HomeController_forgetPassword10_route(params@_) =>
+      call { 
+        controllers_HomeController_forgetPassword10_invoker.call(HomeController_0.forgetPassword)
       }
   }
 }

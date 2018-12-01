@@ -1,0 +1,3 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\natha\Documents\play\app\views\forgetpassword.scala.html:51:121: not found: value commatexample[0m
+[0m[[0m[31merror[0m] [0m[0m                                    <input class="au-input au-input--full" type="email" name="email" placeholder="email@commatexample.com">[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                        ^[0m
