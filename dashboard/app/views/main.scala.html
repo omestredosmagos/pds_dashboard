@@ -1,0 +1,129 @@
+@*
+* This template is called from the `index` template. This template
+* handles the rendering of the page header and body tags. It takes
+* two arguments, a `String` for the title of the page and an `Html`
+* object to insert into the body of the page.
+*@
+@(title: Html)(content: Html)
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="@routes.Assets.at("images/speedometer.png")">
+        <!-- Author Meta -->
+        <meta name="author" content="">
+        <!-- Meta Description -->
+        <meta name="description" content="">
+        <!-- Meta Keyword -->
+        <meta name="keywords" content="">
+        <!-- meta character set -->
+        <meta charset="UTF-8">
+        <!-- Site Title -->
+        <title>@title</title>
+    
+        <link href="@routes.Assets.at("template/css/font-face.css")" rel="stylesheet" media="all">
+            <!--
+            CSS
+            ============================================= -->
+            <link rel="stylesheet" href="@routes.Assets.at("home/css/linearicons.css")">
+            <link rel="stylesheet" href="@routes.Assets.at("home/css/owl.carousel.css")">
+            <link rel="stylesheet" href="@routes.Assets.at("home/css/font-awesome.min.css")">
+            <link rel="stylesheet" href="@routes.Assets.at("home/css/nice-select.css")">
+            <link rel="stylesheet" href="@routes.Assets.at("home/css/magnific-popup.css")">
+            <link rel="stylesheet" href="@routes.Assets.at("home/css/bootstrap.css")">
+            <link rel="stylesheet" href="@routes.Assets.at("home/css/main.css")">
+    </head>
+    <body class="dup-body">
+        <div class="dup-body-wrap">
+            <!-- Start Header Area -->
+            <header class="default-header">
+                <div class="header-wrap">
+                    <div class="header-top d-flex justify-content-between align-items-center">
+                        <div class="logo">
+                            <a href="#"><img src="@routes.Assets.at("images/logo_dashboard-05-05.png")" alt="ConnectEad"></a>
+                        </div>
+                        <div class="main-menubar d-flex align-items-center">
+                            <nav class="hide">
+                                <a href="@routes.HomeController.index()">Home</a>
+                                <a href="@routes.HomeController.login()">Dashboard</a>
+                                <a href="#">Contatos</a>
+                            </nav>
+                            <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End Header Area -->
+            @content
+            <!-- End Contact Area -->
+            <!-- END CONTENT -->
+            <!-- Start Subscription Area -->
+
+            <!-- End Subscription Area -->
+            <!-- Strat Footer Area -->
+            <footer class="section-gap footer-widget-area">
+                <div class="overlay overlay-bg"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h6 class="text-white text-uppercase mb-20">Links de Navegação</h6>
+                                <ul class="footer-nav">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Features</a></li>
+                                    <li><a href="#">Serviços</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h6 class="text-white text-uppercase mb-20">Localização</h6>
+                                <p class="text-white">Rua Dom Manuel de Medeiros, s/n, Dois Irmãos - CEP: 52171-900 - Recife/PE</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h6 class="text-white text-uppercase mb-20">Email</h6>
+                                <p class="text-white">
+                                    <a class="text-white" href="#">hello&commat;ufrpe.com</a> <br>
+                                    <a class="text-white" href="#">mainhelpinfo&commat;ufrpe.com</a> <br>
+                                    <a class="text-white" href="#">infohelp&commat;ufrpe.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h6 class="text-white text-uppercase mb-20">Suporte</h6>
+                                <p class="text-white">
+                                    <a class="text-white" href="#">support&commat;ufrpe.com</a> <br>
+                                    <a class="text-white" href="#">emergencysupp&commat;ufrpe.com</a> <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+                        <p class="footer-text m-0">Copyright &copy; 2018 All rights reserved   |   This template is made with by <a href="https://colorlib.com/">Colorlib</a></p>
+                        <div class="footer-social d-flex align-items-center">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer Area -->
+        </div>
+        <script src="@routes.Assets.at("home/js/vendor/jquery-2.2.4.min.js")"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="@routes.Assets.at("home/js/vendor/bootstrap.min.js")"></script>
+        <script src="@routes.Assets.at("home/js/jquery.ajaxchimp.min.js")"></script>
+        <script src="@routes.Assets.at("home/js/owl.carousel.min.js")"></script>
+        <script src="@routes.Assets.at("home/js/jquery.nice-select.min.js")"></script>
+        <script src="@routes.Assets.at("home/js/jquery.magnific-popup.min.js")"></script>
+        <script src="@routes.Assets.at("home/js/main.js")"></script>
+    </body>
+</html>

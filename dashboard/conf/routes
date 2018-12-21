@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET     /                           controllers.HomeController.index()
+GET     /login                      controllers.HomeController.login()
+GET     /dashboard                  controllers.HomeController.dashboard()
+GET		/buscaajuda				    controllers.HomeController.buscaAjuda()
+GET		/realizacaotarefas			controllers.HomeController.realizacaoTarefas()
+GET		/autoavaliacao				controllers.HomeController.autoavaliacao()
+GET		/gerenciamentotempo		    controllers.HomeController.gerenciamentoTempo()
+GET		/estabelecimentometa		controllers.HomeController.estabelecimentoMeta()
+GET     /signup                     controllers.HomeController.signUp()
+GET     /recuperarsenha             controllers.HomeController.forgetPassword()
+#GET     /teste                      controllers.TesteController.teste()
+GET		/teste1						controllers.TesteController.salvarBanco()
+GET		/teste2						controllers.TesteController.recuperar()

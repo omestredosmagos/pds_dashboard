@@ -1,0 +1,17 @@
+@(numPosts: List[NumeroPosts])
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    </head>
+    <body>
+       <br><br>
+       
+       @for(np <- numPosts){
+       		Id = @np.getUserid() <br>
+       		Primeiro Nome = @np.getFirstname() <br>
+       		Segundo Nome = @np.getLastname() <br>
+       		Numero Posts = @np.getNumberposts() <br>
+       }      
+    </body>
+</html>
