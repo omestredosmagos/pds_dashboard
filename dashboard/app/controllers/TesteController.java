@@ -57,7 +57,7 @@ public class TesteController extends Controller {
 		String query = "FROM NumeroPosts ORDER BY id ASC";
 		List<NumeroPosts> numPosts = JPA.em().createQuery(query).getResultList();
 		
-		return ok(views.html.teste.render(numPosts));
+		return ok(views.html.buscaAjuda.render(numPosts));
 	}
 
 	private static List<Tarefa> crieTarefas() {
@@ -84,16 +84,18 @@ public class TesteController extends Controller {
 
 	@Transactional
 	public static List<Object> getNumeroPosts(List<Object> id) {
-		List<Object> result = idsForum();
-		List<Object> posts = new ArrayList<Object> (result.size()); 
-		List<Object> aux;
+		//List<Object> result = idsForum();
+		List<Object> posts = new ArrayList<Object> (id.size()); 
+		Object aux;
 		String query;
 		
-		for (short i = 0; i < posts.size(); i++) {
+		for (short i = 0; i < id.size(); i++) {
 			query = "SELECT u.id, u.firstname, u.lastname, COUNT(u.id) AS NumeroPosts " + 
-					"FROM mdl_forum_posts fp INNER JOIN mdl_user u ON u.id=fp.userid " + 
-					"WHERE fp.userid = :id;";
-			aux = JPA.em().createNativeQuery(query).setParameter("id", (BigInteger)id.get(i)).getResultList();
+					" FROM mdl_forum_posts fp INNER JOIN mdl_user u ON u.id=fp.userid " + 
+					" WHERE fp.userid=:id";
+			aux = JPA.em().createNativeQuery(query)
+					.setParameter("id", (BigInteger)id.get(i))
+					.getResultList().get(0);
 			
 			posts.add(aux);
 		}
@@ -111,10 +113,10 @@ public class TesteController extends Controller {
 			np = new NumeroPosts();
 			Object[] items = (Object[]) result;
 
-			np.setUserid((Integer)items[0]);
+			np.setUserid(((BigInteger)items[0]).intValue());
 			np.setFirstname((String)items[1]);
 			np.setLastname((String)items[2]);
-			np.setNumberposts((Integer)items[3]);
+			np.setNumberposts(((BigInteger)items[3]).intValue());
 
 			try {
 				JPA.em().persist(np);				

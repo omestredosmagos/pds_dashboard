@@ -36,7 +36,8 @@ public class HomeController extends Controller {
     }
     
     public static Result buscaAjuda() {
-    	return ok(views.html.buscaAjuda.render());
+    	//return ok(views.html.buscaAjuda.render());
+    	return TODO;
     }
     
     /* public Result buscaAjudaCurso(int codCurso) {

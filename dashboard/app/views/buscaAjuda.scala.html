@@ -1,3 +1,5 @@
+@(numPosts: List[NumeroPosts])
+
 @title = {
     Busca por Ajuda
 }
@@ -51,6 +53,62 @@
     <script src="@routes.Assets.at("javascripts/modules/series-label.js")"></script>
     <script src="@routes.Assets.at("javascripts/modules/export-data.js")"></script>
     <script src="@routes.Assets.at("javascripts/busca-ajuda/mensagens-enviadas.js")"></script>
-    <script src="@routes.Assets.at("javascripts/busca-ajuda/topicos-criados.js")"></script>
+    <script>
+    Highcharts.chart('topicos_criados_container', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Quantidade de tópicos criados pelo aluno em fórum do tipo "tira-dúvidas"'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Population (millions)'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
+        },
+        series: [{
+            name: 'Population',
+            data: [
+                @for(np <- numPosts){
+                	["@np.getFirstname()" , @np.getNumberposts()],
+                }
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: -90,
+                color: '#FFFFFF',
+                align: 'right',
+                format: '{point.y:.1f}', // one decimal
+                y: 10, // 10 pixels down from the top
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+    </script>
+    
+    
 }
 @dashboard(title)(content)
