@@ -1,6 +1,6 @@
 # ConnectEad
 
-ConnectEad é um sistema online Java de visualização de dados estudantis, utilizando o Play! Framework.
+ConnectEad é um sistema online Java de visualização de dados estudantis, utilizando o Play! Framework. Com ele, é possível criar dashboards e visualizar dados de um curso EAD, com dados que foram coletados por um ambiente virtual de aprendizagem, como o Moodle. Então o sistema é capaz de verificar quais alunos estão mais participativos no curso, visualizando o número de postagem em fórum ou número de exercícios feitos.
 
 ## Instalando o Play! 2.1.x
 
