@@ -1,6 +1,3 @@
-# pds_dashboard
-Repositório do trabalho da disciplina de Projeto de Desenvolvimento de Software 2018.2 da UFRPE
-
 # ConnectEad
 
 ConnectEad é um sistema online Java de visualização de dados estudantis, utilizando o Play! Framework.
