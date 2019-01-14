@@ -26,7 +26,8 @@
     <link href="@routes.Assets.at("template/vendor/perfect-scrollbar/perfect-scrollbar.css")" rel="stylesheet" media="all">
     <!-- Main CSS-->
     <link href="@routes.Assets.at("template/css/theme.css")" rel="stylesheet" media="all">
-    
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <script src="@routes.Assets.at("template/vendor/jquery-3.2.1.min.js")"></script>
 </head>
 <body class="animsition">
     <div class="page-wrapper">
@@ -49,29 +50,23 @@
                                 <i class="fas fa-chart-bar"></i>Gráficos</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="@routes.HomeController.buscaAjuda()">Busca por Ajuda</a>
+                                    <a href="@routes.PostsController.recuperarNumeroPosts()">Número de Posts</a>
                                 </li>
                                 <li>
-                                    <a href="@routes.HomeController.realizacaoTarefas()">Realização de Tarefas</a>
+                                    <a href="@routes.MensagensController.recuperarMensagensEnviadas()">Mensagens Enviadas</a>
                                 </li>
                                 <li>
-                                    <a href="@routes.HomeController.autoavaliacao()">Autoavaliação</a>
-                                </li>
-                                <li>
-                                	<a href="@routes.HomeController.gerenciamentoTempo()">Gerenciamento do Tempo</a>
-                                </li>
-                                <li>
-                                	<a href="@routes.HomeController.estabelecimentoMeta()">Estabelecimento de Metas</a>
+                                    <a href="@routes.LoginController.recuperarQuantidadeLogin()">Quantidade de Login</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fas fa-envelope"></i>Inbox</a>
+                                <i class="fas fa-envelope"></i><i>Inbox</i></a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fas fa-calendar-alt"></i>Calendário</a>
+                                <i class="fas fa-calendar-alt"></i><i>Calendário</i></a>
                         </li>
                     </ul>
                 </nav>
@@ -223,7 +218,8 @@
             <!-- END PAGE CONTAINER-->
         </div>
     </div>
-    <script src="@routes.Assets.at("template/vendor/jquery-3.2.1.min.js")"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="@routes.Assets.at("template/vendor/bootstrap-4.1/popper.min.js")"></script>
     <script src="@routes.Assets.at("template/vendor/bootstrap-4.1/bootstrap.min.js")"></script>

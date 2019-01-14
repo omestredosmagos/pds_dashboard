@@ -40,26 +40,24 @@ public class HomeController extends Controller {
     	return TODO;
     }
     
-    /* public Result buscaAjudaCurso(int codCurso) {
-        list dadosAlunos = select * from pedidoAjuda;
-        list dadosProfessores = select * from pedidoAjuda;
-    	return ok(views.html.listagemAjuda.render(dadosAlunos, dadosProfessores));
-    }*/ 
-
     public static Result realizacaoTarefas() {
-    	return ok(views.html.realizacaoTarefas.render());
+    	//return ok(views.html.realizacaoTarefas.render());
+    	return TODO;
     }
     
     public static Result autoavaliacao() {
-    	return ok(views.html.autoavaliacao.render());
+    	//return ok(views.html.autoavaliacao.render());
+    	return TODO;
     }
     
     public static Result gerenciamentoTempo() {
-    	return ok(views.html.gerenciamentoTempo.render());
+    	//return ok(views.html.gerenciamentoTempo.render());
+    	return TODO;
     }
     
     public static Result estabelecimentoMeta() {
-    	return ok(views.html.estabelecimentoMeta.render());
+    	//return ok(views.html.estabelecimentoMeta.render());
+    	return TODO;
     }
 }
 

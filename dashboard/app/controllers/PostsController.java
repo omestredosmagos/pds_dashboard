@@ -19,7 +19,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 
-public class TesteController extends Controller {
+public class PostsController extends Controller {
 	
 	//RECUPERAR OS NUMERO DE POSTS
 	@Transactional
@@ -27,7 +27,7 @@ public class TesteController extends Controller {
 		String query = "FROM NumeroPosts ORDER BY id ASC";
 		List<NumeroPosts> numPosts = JPA.em().createQuery(query).getResultList();
 		
-		return ok(views.html.buscaAjuda.render(numPosts));
+		return ok(views.html.numeroPosts.render(numPosts, getMaiorNumeroPosts(), getMenorNumeroPosts()));
 	}
 	
 	//TRATAMENTO DOS DADOS SOBRE NUMERO DE POSTS
@@ -58,6 +58,22 @@ public class TesteController extends Controller {
 			posts.add(aux);
 		}
 		return posts;
+	}
+	
+	@Transactional
+	public static List<NumeroPosts> getMaiorNumeroPosts() {
+		String query = "SELECT firstname, numberposts FROM NumeroPosts ORDER BY numberposts DESC LIMIT 15";
+		List<NumeroPosts> maiorNumPosts = JPA.em().createQuery(query).getResultList();
+		
+		return maiorNumPosts;
+	}
+	
+	@Transactional
+	public static List<NumeroPosts> getMenorNumeroPosts() {
+		String query = "SELECT firstname, numberposts FROM NumeroPosts ORDER BY numberposts ASC LIMIT 15";
+		List<NumeroPosts> menorNumPosts = JPA.em().createQuery(query).getResultList();
+		
+		return menorNumPosts;
 	}
 	
 	//SALVAR NUMERO DE POSTS NO BANCO

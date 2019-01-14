@@ -1,7 +1,7 @@
-@(numPosts: List[NumeroPosts])
+@(numPosts: List[NumeroPosts])(maior: List[NumeroPosts])(menor: List[NumeroPosts])
 
 @title = {
-    Número de Posts
+    Numero de Posts
 }
 
 @content = {  
@@ -11,19 +11,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
-                            <h2 class="title-1">Busca por Ajuda</h2>
+                            <h2 class="title-1">Numero de Posts</h2>
                             <button class="au-btn au-btn-icon au-btn--blue">
-                                <i class="zmdi zmdi-plus"></i>Adicionar Gráfico</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="au-card visualization1">
-                            <div class="au-card-inner">
-                                <h3 class="title-2">Mensagens Enviadas</h3>
-                                <div id="mensagens_enviadas_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
-                            </div>
+                                <i class="zmdi zmdi-plus"></i>Adicionar Grafico</button>
                         </div>
                     </div>
                 </div>
@@ -31,7 +21,6 @@
                     <div class="col-lg-12">
                         <div class="au-card visualization2">
                             <div class="au-card-inner">
-                                <h3 class="title-2">Tópicos Criados pelo Aluno</h3>
                                 <div id="topicos_criados_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
                                 <div style="margin-top: 30px;" class="table-responsive m-b-40">
                                     <table id="tabela_posts" class="table table-borderless table-data3">
@@ -72,8 +61,7 @@
     <script src="@routes.Assets.at("javascripts/modules/exporting.js")"></script>
     <script src="@routes.Assets.at("javascripts/modules/series-label.js")"></script>
     <script src="@routes.Assets.at("javascripts/modules/export-data.js")"></script>
-    <script src="@routes.Assets.at("javascripts/busca-ajuda/mensagens-enviadas.js")"></script>
-    
+        
     <script>
     $(document).ready( function () {
     	$('#tabela_posts').DataTable({
@@ -89,7 +77,7 @@
             type: 'column'
         },
         title: {
-            text: 'Quantidade de tópicos criados pelo aluno em fórum do tipo "tira-dúvidas"'
+            text: 'Quantidade de topicos criados pelo aluno em forum do tipo "tira-duvidas"'
         },
         subtitle: {
             text: ''
@@ -107,7 +95,7 @@
         yAxis: {
             min: 0,
             title: {
-                text: 'Population (millions)'
+                text: ''
             }
         },
         legend: {

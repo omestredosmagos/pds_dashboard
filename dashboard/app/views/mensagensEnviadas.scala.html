@@ -1,7 +1,7 @@
-@(numPosts: List[NumeroPosts])
+@(msgEnviadas: List[MensagensEnviadas])
 
 @title = {
-    Número de Posts
+    Mensagens Enviadas
 }
 
 @content = {  
@@ -11,19 +11,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
-                            <h2 class="title-1">Busca por Ajuda</h2>
+                            <h2 class="title-1">Mensagens Enviadas</h2>
                             <button class="au-btn au-btn-icon au-btn--blue">
-                                <i class="zmdi zmdi-plus"></i>Adicionar Gráfico</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="au-card visualization1">
-                            <div class="au-card-inner">
-                                <h3 class="title-2">Mensagens Enviadas</h3>
-                                <div id="mensagens_enviadas_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
-                            </div>
+                                <i class="zmdi zmdi-plus"></i>Adicionar Grafico</button>
                         </div>
                     </div>
                 </div>
@@ -31,23 +21,23 @@
                     <div class="col-lg-12">
                         <div class="au-card visualization2">
                             <div class="au-card-inner">
-                                <h3 class="title-2">Tópicos Criados pelo Aluno</h3>
-                                <div id="topicos_criados_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
+                                <h3 class="title-2">Leituras feitas ao Fórum</h3>
+                                <div id="mensagens_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
                                 <div style="margin-top: 30px;" class="table-responsive m-b-40">
-                                    <table id="tabela_posts" class="table table-borderless table-data3">
+                                    <table id="tabela_mensagens" class="table table-borderless table-data3">
                                     	<thead>
                                     		<th scope="col">ID</th>
                                     		<th scope="col">NOME</th>
                                     		<th scope="col">SOBRENOME</th>
-                                    		<th scope="col">NUMERO DE POSTS</th>
+                                    		<th scope="col">MENSAGENS ENVIADAS</th>
                                     	</thead>
                                     	<tbody>
-                                    		@for(np <- numPosts){
+                                    		@for(me <- msgEnviadas){
                                     		<tr scope="row">
-                                    			<td>@np.getUserid()</td>
-                                    			<td>@np.getFirstname()</td>
-                                    			<td>@np.getLastname()</td>
-                                    			<td>@np.getNumberposts()</td>	
+                                    			<td>@me.getUserid()</td>
+                                    			<td>@me.getFirstname()</td>
+                                    			<td>@me.getLastname()</td>
+                                    			<td>@me.getMsgenviadas()</td>	
                                     		</tr>
                                     		}
                                     	</tbody>
@@ -72,11 +62,10 @@
     <script src="@routes.Assets.at("javascripts/modules/exporting.js")"></script>
     <script src="@routes.Assets.at("javascripts/modules/series-label.js")"></script>
     <script src="@routes.Assets.at("javascripts/modules/export-data.js")"></script>
-    <script src="@routes.Assets.at("javascripts/busca-ajuda/mensagens-enviadas.js")"></script>
     
     <script>
     $(document).ready( function () {
-    	$('#tabela_posts').DataTable({
+    	$('#tabela_mensagens').DataTable({
     		scrollx: 400,
     		select: true
     	});
@@ -84,12 +73,12 @@
     </script>
     
     <script>
-    Highcharts.chart('topicos_criados_container', {
+    Highcharts.chart('mensagens_container', {
         chart: {
             type: 'column'
         },
         title: {
-            text: 'Quantidade de tópicos criados pelo aluno em fórum do tipo "tira-dúvidas"'
+            text: 'Quantidade de mensagens enviadas por Aluno dentro do ambiente"'
         },
         subtitle: {
             text: ''
@@ -107,7 +96,7 @@
         yAxis: {
             min: 0,
             title: {
-                text: 'Population (millions)'
+                text: ''
             }
         },
         legend: {
@@ -119,8 +108,8 @@
         series: [{
             name: 'Posts',
             data: [
-                @for(np <- numPosts){
-                	["@np.getFirstname()" , @np.getNumberposts()],
+                @for(me <- msgEnviadas){
+                	["@me.getFirstname()" , @me.getMsgenviadas()],
                 }
             ],
             dataLabels: {
@@ -138,7 +127,6 @@
         }]
     });
     </script>
-    
     
 }
 @dashboard(title)(content)
