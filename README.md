@@ -82,5 +82,10 @@ Para começar a utilizar a aplicação, basta usar o comando run
 ```
 
 Vai ser possível ver a aplicação rodando no localhost:9000. O Play! já vem com um servidor local próprio
+
+## Acesso ao Banco de Dados
+
+Neste link > https://drive.google.com/open?id=18aMC5jnXB1ti5582OZwAqkR1Gb5LFgAm, está disponível a base de dados que utilizamos neste projeto.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
