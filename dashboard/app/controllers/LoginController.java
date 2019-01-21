@@ -33,12 +33,11 @@ public class LoginController extends Controller {
 	//TRATAMENTO DOS DADOS SOBRE A QUANTIDADE DE LOGINS
 	@Transactional
 	public static List<Object> getQuantidadeLogin() {
-		String query = "SELECT u.id, u.firstname, u.lastname, COUNT(l.id) AS qvisita" + 
-				"FROM mdl_user u" + 
-				"INNER JOIN mdl_log l ON u.id = l.userid" + 
-				"WHERE action='login'" + 
-				"GROUP BY u.id, u.firstname, u.lastname" + 
-				"ORDER BY COUNT(l.id) DESC LIMIT 15";
+		String query = "SELECT u.id, u.firstname, u.lastname, count(*) as visitas" + 
+				" FROM mdl_user u, mdl_log log" + 
+				" WHERE u.id = log.userid AND log.action='login' AND log.course=1" + 
+				" GROUP BY u.id" + 
+				" ORDER BY visitas DESC";
 		List<Object> logins = JPA.em().createNativeQuery(query).getResultList();
 		
 		return logins;
@@ -67,5 +66,5 @@ public class LoginController extends Controller {
 			}	
 		}
 		return ok("Salvo com sucesso. Acesse /recuperar para ver os dados salvos no banco");
-	}	
+	}
 }

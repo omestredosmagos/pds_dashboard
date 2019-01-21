@@ -26,8 +26,8 @@ public class PostsController extends Controller {
 	public static Result recuperarNumeroPosts(){
 		String query = "FROM NumeroPosts ORDER BY id ASC";
 		List<NumeroPosts> numPosts = JPA.em().createQuery(query).getResultList();
-		
-		return ok(views.html.numeroPosts.render(numPosts, getMaiorNumeroPosts(), getMenorNumeroPosts()));
+			
+		return ok(views.html.numeroPosts.render(numPosts, getMaiorNumeroPosts()));
 	}
 	
 	//TRATAMENTO DOS DADOS SOBRE NUMERO DE POSTS
@@ -62,19 +62,32 @@ public class PostsController extends Controller {
 	
 	@Transactional
 	public static List<NumeroPosts> getMaiorNumeroPosts() {
+		List<NumeroPosts> maiorNumPosts = new ArrayList<NumeroPosts>();
+		NumeroPosts np1;
+		
 		String query = "SELECT firstname, numberposts FROM NumeroPosts ORDER BY numberposts DESC LIMIT 15";
-		List<NumeroPosts> maiorNumPosts = JPA.em().createQuery(query).getResultList();
+		List<Object> aux = JPA.em().createNativeQuery(query).getResultList();
+		
+		for (Object result: aux) {
+			np1 = new NumeroPosts();
+			Object[] items = (Object[]) result;
+			
+			np1.setFirstname((String)items[0]);
+			np1.setNumberposts(((Integer)items[1]).intValue());
+			
+			maiorNumPosts.add(np1);
+		}
 		
 		return maiorNumPosts;
 	}
 	
-	@Transactional
+	/*@Transactional
 	public static List<NumeroPosts> getMenorNumeroPosts() {
 		String query = "SELECT firstname, numberposts FROM NumeroPosts ORDER BY numberposts ASC LIMIT 15";
-		List<NumeroPosts> menorNumPosts = JPA.em().createQuery(query).getResultList();
+		List<NumeroPosts> menorNumPosts = (List<NumeroPosts>) JPA.em().createNativeQuery(query).getResultList();
 		
 		return menorNumPosts;
-	}
+	}*/
 	
 	//SALVAR NUMERO DE POSTS NO BANCO
 	@Transactional

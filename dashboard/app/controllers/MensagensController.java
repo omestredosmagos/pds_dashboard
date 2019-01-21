@@ -27,7 +27,17 @@ public class MensagensController extends Controller {
 		String query = "FROM MensagensEnviadas ORDER BY id ASC";
 		List<MensagensEnviadas> msgEnviadas = JPA.em().createQuery(query).getResultList();
 		
-		return ok(views.html.mensagensEnviadas.render(msgEnviadas));
+		String query1 = "SELECT firstname, msgenviadas "
+				+ " FROM MensagensEnviadas "
+				+ " ORDER BY msgenviadas DESC LIMIT 15";
+		List<MensagensEnviadas> msgMaior = JPA.em().createNativeQuery(query1).getResultList();
+		
+		String query2 = "SELECT firstname, msgenviadas "
+				+ " FROM MensagensEnviadas "
+				+ " ORDER BY msgenviadas ASC LIMIT 15";
+		List<MensagensEnviadas> msgMenor = JPA.em().createNativeQuery(query2).getResultList();
+		
+		return ok(views.html.mensagensEnviadas.render(msgEnviadas, msgMaior, msgMenor));
 	}
 	
 	//TRATAMENTO DOS DADOS SOBRE MENSAGENS ENVIADAS

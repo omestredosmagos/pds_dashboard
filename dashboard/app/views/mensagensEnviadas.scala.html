@@ -1,4 +1,4 @@
-@(msgEnviadas: List[MensagensEnviadas])
+@(msgEnviadas: List[MensagensEnviadas])(maior: List[MensagensEnviadas])(menor: List[MensagensEnviadas])
 
 @title = {
     Mensagens Enviadas
@@ -66,67 +66,69 @@
     <script>
     $(document).ready( function () {
     	$('#tabela_mensagens').DataTable({
-    		scrollx: 400,
-    		select: true
+    		"sDom": '<"top"f>t<"bottom"ip>',
+    		pageLength: 10,
+    		paging: false,
+    		scrollY: 400
     	});
     } );
     </script>
     
     <script>
     Highcharts.chart('mensagens_container', {
-        chart: {
-            type: 'column'
-        },
+    title: {
+        text: 'Quantidade de mensagens enviadas por Aluno dentro do ambiente'
+    },
+
+    subtitle: {
+        text: ''
+    },
+
+    yAxis: {
         title: {
-            text: 'Quantidade de mensagens enviadas por Aluno dentro do ambiente"'
-        },
-        subtitle: {
-            text: ''
-        },
-        xAxis: {
-            type: 'category',
-            labels: {
-                rotation: -45,
-                style: {
-                    fontSize: '13px',
-                    fontFamily: 'Verdana, sans-serif'
+            text: 'Número de Mensagens'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2010
+        }
+    },
+
+    series: [{
+        name: 'Alunos com mais mensagens enviadas',
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }, {
+        name: 'Alunos com menos mensagens enviadas',
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
                 }
-            }
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: ''
-            }
-        },
-        legend: {
-            enabled: false
-        },
-        @*tooltip: {
-            pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
-        },*@
-        series: [{
-            name: 'Posts',
-            data: [
-                @for(me <- msgEnviadas){
-                	["@me.getFirstname()" , @me.getMsgenviadas()],
-                }
-            ],
-            dataLabels: {
-                enabled: true,
-                @*rotation: -90,
-                color: '#FFFFFF',
-                align: 'right',
-                format: '{point.y:.1f}', // one decimal
-                y: 10, // 10 pixels down from the top
-                style: {
-                    fontSize: '13px',
-                    fontFamily: 'Verdana, sans-serif'
-                }*@
             }
         }]
+    }
+
     });
     </script>
-    
+        
 }
 @dashboard(title)(content)

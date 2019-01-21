@@ -1,4 +1,4 @@
-@(numPosts: List[NumeroPosts])(maior: List[NumeroPosts])(menor: List[NumeroPosts])
+@(numPosts: List[NumeroPosts])(maior: List[NumeroPosts])
 
 @title = {
     Numero de Posts
@@ -65,8 +65,10 @@
     <script>
     $(document).ready( function () {
     	$('#tabela_posts').DataTable({
-    		scrollx: 400,
-    		select: true
+    		"sDom": '<"top"f>t<"bottom"ip>',
+    		pageLength: 10,
+    		paging: false,
+    		scrollY: 400
     	});
     } );
     </script>
@@ -101,14 +103,12 @@
         legend: {
             enabled: false
         },
-        @*tooltip: {
-            pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
-        },*@
         series: [{
             name: 'Posts',
+            color: '#09AB15',
             data: [
-                @for(np <- numPosts){
-                	["@np.getFirstname()" , @np.getNumberposts()],
+                @for(aux <- maior){
+                	["@aux.getFirstname()" , @aux.getNumberposts()],
                 }
             ],
             dataLabels: {

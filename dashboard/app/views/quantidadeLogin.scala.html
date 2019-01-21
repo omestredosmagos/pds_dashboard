@@ -21,16 +21,29 @@
                     <div class="col-lg-12">
                         <div class="au-card visualization2">
                             <div class="au-card-inner">
-                                <h3 class="title-2">Respostas ao Tópico Principal</h3>
-                                <div id="respostas_principal_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
+                                <h3 class="title-2">Quantidade de Acessos ao Ambiente</h3>
+                                <div id="mensagens_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
+                                <div style="margin-top: 30px;" class="table-responsive m-b-40">
+                                    <table id="tabela_mensagens" class="table table-borderless table-data3">
+                                    	<thead>
+                                    		<th scope="col">ID</th>
+                                    		<th scope="col">NOME</th>
+                                    		<th scope="col">SOBRENOME</th>
+                                    		<th scope="col">QUANTIDADE DE ACESSOS</th>
+                                    	</thead>
+                                    	<tbody>
+                                    		@for(ql <- qtdLogin){
+                                    		<tr scope="row">
+                                    			<td>@ql.getUserid()</td>
+                                    			<td>@ql.getFirstname()</td>
+                                    			<td>@ql.getLastname()</td>
+                                    			<td>@ql.getQtdLogin()</td>	
+                                    		</tr>
+                                    		}
+                                    	</tbody>
+                                	</table>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="copyright">
-                            <p>Copyright 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                         </div>
                     </div>
                 </div>
@@ -42,5 +55,19 @@
     <script src="@routes.Assets.at("javascripts/modules/exporting.js")"></script>
     <script src="@routes.Assets.at("javascripts/modules/series-label.js")"></script>
     <script src="@routes.Assets.at("javascripts/modules/export-data.js")"></script>
+    
+    <script>
+    $(document).ready( function () {
+    	$('#tabela_mensagens').DataTable({
+    		"sDom": '<"top"f>t<"bottom"ip>',
+    		pageLength: 10,
+    		paging: false,
+    		scrollY: 400
+    	});
+    } );
+    </script>
+    <script>
+    </script>
+    
 }
 @dashboard(title)(content)
