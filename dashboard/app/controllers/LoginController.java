@@ -43,7 +43,7 @@ public class LoginController extends Controller {
 		return logins;
 	}
 	
-	@Transctional
+	@Transactional
 	public static List<QuantidadeLogin> getMaiorQuantidadeLogin(){
 		List<QuantidadeLogin> maiorQuantidadeLogin = new ArrayList<QuantidadeLogin>();
 		QuantidadeLogin ql1;
@@ -66,7 +66,7 @@ public class LoginController extends Controller {
 		return maiorQuantidadeLogin;
 	}
 	
-	@Transctional
+	@Transactional
 	public static List<QuantidadeLogin> getMenorQuantidadeLogin(){
 		List<QuantidadeLogin> menorQuantidadeLogin = new ArrayList<QuantidadeLogin>();
 		QuantidadeLogin ql2;
