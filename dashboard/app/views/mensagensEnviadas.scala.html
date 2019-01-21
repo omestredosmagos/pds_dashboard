@@ -13,7 +13,7 @@
                         <div class="overview-wrap">
                             <h2 class="title-1">Mensagens Enviadas</h2>
                             <button class="au-btn au-btn-icon au-btn--blue">
-                                <i class="zmdi zmdi-plus"></i>Adicionar Grafico</button>
+                                <i class="zmdi zmdi-plus"></i>Adicionar Gráfico</button>
                         </div>
                     </div>
                 </div>
@@ -106,10 +106,17 @@
 
     series: [{
         name: 'Alunos com mais mensagens enviadas',
-        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+        color: '#09AB15',
+        data: [
+            @for(aux <- maior){
+            	["@aux.getFirstname()" , @aux.getMsgenviadas()],
+            }],
     }, {
         name: 'Alunos com menos mensagens enviadas',
-        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+        color: '#BF2B0A', 
+        data: [@for(aux <- menor){
+        	["@aux.getFirstname()" , @aux.getMsgenviadas()],
+        }],
     }],
 
     responsive: {

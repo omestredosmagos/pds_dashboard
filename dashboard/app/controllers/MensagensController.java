@@ -26,18 +26,8 @@ public class MensagensController extends Controller {
 	public static Result recuperarMensagensEnviadas() {
 		String query = "FROM MensagensEnviadas ORDER BY id ASC";
 		List<MensagensEnviadas> msgEnviadas = JPA.em().createQuery(query).getResultList();
-		
-		String query1 = "SELECT firstname, msgenviadas "
-				+ " FROM MensagensEnviadas "
-				+ " ORDER BY msgenviadas DESC LIMIT 15";
-		List<MensagensEnviadas> msgMaior = JPA.em().createNativeQuery(query1).getResultList();
-		
-		String query2 = "SELECT firstname, msgenviadas "
-				+ " FROM MensagensEnviadas "
-				+ " ORDER BY msgenviadas ASC LIMIT 15";
-		List<MensagensEnviadas> msgMenor = JPA.em().createNativeQuery(query2).getResultList();
-		
-		return ok(views.html.mensagensEnviadas.render(msgEnviadas, msgMaior, msgMenor));
+			
+		return ok(views.html.mensagensEnviadas.render(msgEnviadas, getMaiorMensagensEnviadas(), getMenorMensagensEnviadas()));
 	}
 	
 	//TRATAMENTO DOS DADOS SOBRE MENSAGENS ENVIADAS
@@ -51,6 +41,51 @@ public class MensagensController extends Controller {
 		List<Object> msg = JPA.em().createNativeQuery(query).getResultList();
 		
 		return msg;
+	}
+	
+	@Transactional
+	public static List<MensagensEnviadas> getMaiorMensagensEnviadas(){
+		List<MensagensEnviadas> maiorMensagensEnviadas = new ArrayList<MensagensEnviadas>();
+		MensagensEnviadas me1;
+		
+		String query = "SELECT firstname, msgenviadas "
+				+ " FROM MensagensEnviadas "
+				+ " ORDER BY msgenviadas ASC LIMIT 15";
+		List<Object> aux = JPA.em().createNativeQuery(query).getResultList();
+		
+		for (Object result: aux) {
+			me1 = new MensagensEnviadas();
+			Object[] items = (Object[]) result;
+			
+			me1.setFirstname((String)items[0]);
+			me1.setMsgenviadas(((Integer)items[1]).intValue());
+			
+			maiorMensagensEnviadas.add(me1);
+		}
+		
+		return maiorMensagensEnviadas;
+	}
+	
+	public static List<MensagensEnviadas> getMenorMensagensEnviadas(){
+		List<MensagensEnviadas> menorMensagensEnviadas = new ArrayList<MensagensEnviadas>();
+		MensagensEnviadas me2;
+		
+		String query = "SELECT firstname, msgenviadas "
+				+ " FROM MensagensEnviadas "
+				+ " ORDER BY msgenviadas DESC LIMIT 15";
+		List<Object> aux = JPA.em().createNativeQuery(query).getResultList();
+		
+		for (Object result: aux) {
+			me2 = new MensagensEnviadas();
+			Object[] items = (Object[]) result;
+			
+			me2.setFirstname((String)items[0]);
+			me2.setMsgenviadas(((Integer)items[1]).intValue());
+			
+			menorMensagensEnviadas.add(me2);
+		}
+		
+		return menorMensagensEnviadas;
 	}
 	
 	//SALVAR MENSAGENS ENVIADAS NO BANCO

@@ -27,7 +27,7 @@ public class LoginController extends Controller {
 		String query = "FROM QuantidadeLogin ORDER BY id ASC";
 		List<QuantidadeLogin> qtdLogin = JPA.em().createQuery(query).getResultList();
 		
-		return ok(views.html.quantidadeLogin.render(qtdLogin));
+		return ok(views.html.quantidadeLogin.render(qtdLogin, getMaiorQuantidadeLogin(), getMenorQuantidadeLogin()));
 	}
 	
 	//TRATAMENTO DOS DADOS SOBRE A QUANTIDADE DE LOGINS
@@ -41,6 +41,52 @@ public class LoginController extends Controller {
 		List<Object> logins = JPA.em().createNativeQuery(query).getResultList();
 		
 		return logins;
+	}
+	
+	@Transctional
+	public static List<QuantidadeLogin> getMaiorQuantidadeLogin(){
+		List<QuantidadeLogin> maiorQuantidadeLogin = new ArrayList<QuantidadeLogin>();
+		QuantidadeLogin ql1;
+		
+		String query = "SELECT firstname, qtdlogin"
+				+ " FROM QuantidadeLogin"
+				+ "	ORDER BY qtdlogin DESC LIMIT 25";
+		List<Object> aux = JPA.em().createNativeQuery(query).getResultList();
+		
+		for (Object result: aux) {
+			ql1 = new QuantidadeLogin();
+			Object[] items = (Object[]) result;
+			
+			ql1.setFirstname((String)items[0]);
+			ql1.setQtdLogin(((Integer)items[1]).intValue());
+			
+			maiorQuantidadeLogin.add(ql1);
+		}
+		
+		return maiorQuantidadeLogin;
+	}
+	
+	@Transctional
+	public static List<QuantidadeLogin> getMenorQuantidadeLogin(){
+		List<QuantidadeLogin> menorQuantidadeLogin = new ArrayList<QuantidadeLogin>();
+		QuantidadeLogin ql2;
+		
+		String query = "SELECT firstname, qtdlogin"
+				+ " FROM QuantidadeLogin"
+				+ "	ORDER BY qtdlogin ASC LIMIT 25";
+		List<Object> aux = JPA.em().createNativeQuery(query).getResultList();
+		
+		for (Object result: aux) {
+			ql2 = new QuantidadeLogin();
+			Object[] items = (Object[]) result;
+			
+			ql2.setFirstname((String)items[0]);
+			ql2.setQtdLogin(((Integer)items[1]).intValue());
+			
+			menorQuantidadeLogin.add(ql2);
+		}
+		
+		return menorQuantidadeLogin;
 	}
 	
 	//SALVAR QUANTIDADE DE LOGIN O BANCO

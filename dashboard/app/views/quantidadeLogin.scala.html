@@ -1,4 +1,4 @@
-@(qtdLogin: List[QuantidadeLogin])
+@(qtdLogin: List[QuantidadeLogin])(maior: List[QuantidadeLogin])(menor: List[QuantidadeLogin])
 
 @title = {
     Quantidade Login
@@ -13,7 +13,7 @@
                         <div class="overview-wrap">
                             <h2 class="title-1">Quantidade Login</h2>
                             <button class="au-btn au-btn-icon au-btn--blue">
-                                <i class="zmdi zmdi-plus"></i>Adicionar Grafico</button>
+                                <i class="zmdi zmdi-plus"></i>Adicionar Gráfico</button>
                         </div>
                     </div>
                 </div>
@@ -22,9 +22,9 @@
                         <div class="au-card visualization2">
                             <div class="au-card-inner">
                                 <h3 class="title-2">Quantidade de Acessos ao Ambiente</h3>
-                                <div id="mensagens_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
+                                <div id="logins_container" style="min-width: 310px; height: 370px; margin: 0 auto"></div>
                                 <div style="margin-top: 30px;" class="table-responsive m-b-40">
-                                    <table id="tabela_mensagens" class="table table-borderless table-data3">
+                                    <table id="tabela_logins" class="table table-borderless table-data3">
                                     	<thead>
                                     		<th scope="col">ID</th>
                                     		<th scope="col">NOME</th>
@@ -58,7 +58,7 @@
     
     <script>
     $(document).ready( function () {
-    	$('#tabela_mensagens').DataTable({
+    	$('#tabela_logins').DataTable({
     		"sDom": '<"top"f>t<"bottom"ip>',
     		pageLength: 10,
     		paging: false,
@@ -67,6 +67,66 @@
     } );
     </script>
     <script>
+    Highcharts.chart('logins_container', {
+        title: {
+            text: 'Quantidade de acessos do aluno ao ambiente'
+        },
+
+        subtitle: {
+            text: ''
+        },
+
+        yAxis: {
+            title: {
+                text: 'NÃºmero de Acessos'
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                pointStart: 2010
+            }
+        },
+
+        series: [{
+            name: 'Alunos com mais acessos',
+            color: '#09AB15', 
+            data: [
+                @for(aux <- maior){
+                	["@aux.getFirstname()" , @aux.getQtdLogin()],
+                }],
+        }, {
+            name: 'Alunos com menos acessos',
+            color: '#BF2B0A', 
+            data: [@for(aux <- menor){
+            	["@aux.getFirstname()" , @aux.getQtdLogin()],
+            }],
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+        });
     </script>
     
 }
